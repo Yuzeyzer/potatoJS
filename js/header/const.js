@@ -1,0 +1,9 @@
+export const header = document.createElement('header');
+export const dropDown = document.createElement('ul');
+export const nav = document.createElement('nav');
+export const navLinks = ['Women', 'Man', 'Children', 'Accessories', 'Blog', 'Contact'];
+export const ul = document.createElement('ul');
+export const li = document.createElement('li');
+export const languages = ['English', 'Russian'];
+export const img = document.createElement('img');
+export let liForLoop = null;
