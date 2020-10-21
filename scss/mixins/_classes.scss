@@ -1,0 +1,19 @@
+@mixin flexbox($justifyValue: center) {
+	display: flex;
+	align-items: center;
+	justify-content: $justifyValue;
+}
+@mixin position($abs, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+	position: $abs;
+	left: $left;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+}
+
+@mixin font($family, $size, $weight: 400, $style: normal) {
+	font-family: $family;
+	font-weight: $weight;
+	font-size: $size;
+	font-style: $style;
+}

@@ -1,0 +1,70 @@
+.header {
+  position: relative;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.header::before, .header::after {
+  content: "";
+  position: absolute;
+  left: auto;
+  top: 50px;
+  right: 0;
+  bottom: auto;
+  width: 100%;
+  height: 1px;
+  background-color: #eeeeee;
+}
+
+.header::after {
+  top: 150px;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.burger-menu {
+  width: 28px;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: #7b7b7b;
+  transition: 0.3s;
+}
+
+.burger-menu span::before, .burger-menu span::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  background-color: inherit;
+  transition: 0.3s;
+}
+
+.burger-menu span::before {
+  width: 28px;
+  transform: translateY(-5px);
+}
+
+.burger-menu span::after {
+  width: 14px;
+  transform: translateY(5px);
+}
+
+.burger-menu:hover span {
+  width: 28px;
+}
+
+.burger-menu:hover span::after {
+  width: 28px;
+}
+/*# sourceMappingURL=index.css.map */

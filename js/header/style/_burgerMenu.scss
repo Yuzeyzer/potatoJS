@@ -1,0 +1,35 @@
+.burger-menu {
+	$width: 28px;
+	width: $width;
+	cursor: pointer;
+	span {
+		display: inline-block;
+		width: 20px;
+		height: 2px;
+		background-color: #7b7b7b;
+		transition: 0.3s;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			height: inherit;
+			background-color: inherit;
+			transition: 0.3s;
+		}
+		&::before {
+			width: $width;
+			transform: translateY(-5px);
+		}
+		&::after {
+			width: 14px;
+			transform: translateY(5px);
+		}
+	}
+
+	&:hover span {
+		width: $width;
+		&::after {
+			width: $width;
+		}
+	}
+}

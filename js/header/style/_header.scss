@@ -1,0 +1,20 @@
+.header {
+	position: relative;
+	@include font('Poppins', 24px);
+	&::before,
+	&::after {
+		content: "";
+		@include position(absolute, 50px, 0);
+		width: 100%;
+		height: 1px;
+		background-color: #eeeeee;
+	}
+	&::after {
+		top: 150px;
+	}
+
+	&-bottom {
+		@include flexbox(space-between);
+		min-height: 100px;
+	}
+}
