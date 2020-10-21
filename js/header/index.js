@@ -7,8 +7,6 @@ import logo from './logo.js';
 import searchIcon from './search.js'
 import './dropDownItem.js';
 
-console.log(logo);
-
 const headerRow = document.createElement('div');
 const headerBottom = document.createElement('div');
 

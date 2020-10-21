@@ -1,3 +1,51 @@
+body {
+  overflow: hidden;
+}
+
+.preloader {
+  position: fixed;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  animation: 1s overlay 2.5s linear forwards;
+}
+
+.preloader h1 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 72px;
+  font-style: normal;
+  animation: 1s hatam 0s ease-in-out forwards;
+}
+
+@keyframes overlay {
+  from {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    left: 100%;
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes hatam {
+  from {
+    font-size: 372px;
+  }
+  to {
+    font-size: 72px;
+  }
+}
+
 .header {
   position: relative;
   font-family: "Poppins";
