@@ -1,6 +1,6 @@
-import header from './header/index.js';
-import { imgWrapper, time } from './photoGenerator/index.js';
-import overlay from './preloader/index.js';
+import header from './components/header/index.js';
+import { imgWrapper, time } from './components/photoGenerator/index.js';
+import overlay from './components/preloader/index.js';
 
 console.log(overlay);
 

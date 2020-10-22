@@ -1,4 +1,4 @@
-import { container } from '../base.js';
+import { container } from '../../base.js';
 import { dropDown, header } from './const.js';
 import burgerMenu from './burgerMenu.js';
 import nav from './nav.js';

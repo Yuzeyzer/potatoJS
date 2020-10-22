@@ -1,5 +1,6 @@
-body {
-  overflow: hidden;
+::-webkit-scrollbar {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .preloader {
@@ -23,21 +24,23 @@ body {
   font-weight: 700;
   font-size: 72px;
   font-style: normal;
-  animation: 1s hatam 0s ease-in-out forwards;
+  animation: 1s fontSize 0s ease-in-out forwards;
 }
 
 @keyframes overlay {
   from {
-    left: 0;
-    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
   to {
-    left: 100%;
-    transform: rotate(90deg);
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
-@keyframes hatam {
+@keyframes fontSize {
   from {
     font-size: 372px;
   }
