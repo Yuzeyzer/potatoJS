@@ -1,4 +1,9 @@
+body {
+  margin: 0;
+}
+
 ::-webkit-scrollbar {
+  display: none;
   opacity: 0;
   visibility: hidden;
 }
@@ -25,6 +30,10 @@
   font-size: 72px;
   font-style: normal;
   animation: 1s fontSize 0s ease-in-out forwards;
+}
+
+.preloader span {
+  color: red;
 }
 
 @keyframes overlay {

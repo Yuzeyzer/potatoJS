@@ -37,7 +37,7 @@ time.appendChild(secondsHTML);
 
 const newYears = '22 Oct 2020';
 
-function countDown() {
+const countDown = () => {
   const newYearsDate = new Date(newYears);
   const currentDate = new Date();
 
