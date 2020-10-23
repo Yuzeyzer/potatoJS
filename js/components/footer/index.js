@@ -19,6 +19,12 @@ const Footer = () => {
 
   footerInput.setAttribute('placeholder', 'Enter your email address');
 
+  footerButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log(footerLabel)
+    footerLabel.classList.toggle('is-active');
+  });
+
   footerTitle.innerHTML = `Join Our Newsletter`;
   footerButton.innerHTML = 'Subscribe';
   footerLabel.appendChild(footerInput);
@@ -27,7 +33,6 @@ const Footer = () => {
   footer.appendChild(container);
   container.appendChild(footerTitle);
   container.appendChild(footerForm);
-
   return footer;
 };
 
