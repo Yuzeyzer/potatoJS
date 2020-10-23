@@ -3,6 +3,7 @@
 	width: $width;
 	cursor: pointer;
 	span {
+		position: relative;
 		display: inline-block;
 		width: 20px;
 		height: 2px;

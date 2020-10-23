@@ -1,0 +1,14 @@
+.container {
+	max-width: 1170px;
+	margin: auto;
+}
+
+body {
+	margin: 0;
+}
+
+::-webkit-scrollbar {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}

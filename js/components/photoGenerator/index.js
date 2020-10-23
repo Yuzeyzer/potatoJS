@@ -1,9 +1,9 @@
-import { colorGray } from "../header/const.js";
+import { colorGray } from '../header/const.js';
 
 export const imgWrapper = document.createElement('div');
 imgWrapper.style.padding = '0 40px';
 imgWrapper.style.boxSizing = 'border-box';
-imgWrapper.style.margin = '100px 0 0 0';
+imgWrapper.style.margin = '100px 0';
 
 for (let i = 0; i < 12; i++) {
   var img = document.createElement('img');
@@ -35,14 +35,14 @@ time.appendChild(hoursHTML);
 time.appendChild(minutesHTML);
 time.appendChild(secondsHTML);
 
-const newYears = '22 Oct 2020';
+const newYears = '24 Oct 2020';
 
 const countDown = () => {
   const newYearsDate = new Date(newYears);
   const currentDate = new Date();
 
-	const seconds = Math.floor((newYearsDate - currentDate) / 1000);
-	const totalSeconds = Math.floor(seconds % 60);
+  const seconds = Math.floor((newYearsDate - currentDate) / 1000);
+  const totalSeconds = Math.floor(seconds % 60);
   const days = Math.floor(seconds / 3600 / 24);
   const hours = Math.floor(seconds / 3600) % 24;
   const minutes = Math.floor(seconds / 60) % 60;
@@ -50,6 +50,6 @@ const countDown = () => {
   hoursHTML.innerHTML = `${hours < 10 ? `0${hours}:` : hours}`;
   minutesHTML.innerHTML = `${minutes < 10 ? `0${minutes}:` : minutes}:`;
   secondsHTML.innerHTML = `${totalSeconds < 10 ? `0${totalSeconds}` : totalSeconds}`;
-}
+};
 countDown();
 setInterval(countDown, 1000);

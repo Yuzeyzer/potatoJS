@@ -1,0 +1,11 @@
+.footer {
+	padding: 100px 0;
+	background-color: $whitish;
+	text-align: center;
+	&__title {
+		@include font("Poppins", 35px, 500);
+		margin: 0;
+		line-height: 40px;
+		color: #293341;
+	}
+}

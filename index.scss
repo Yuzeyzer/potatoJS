@@ -1,13 +1,7 @@
-body {
-	margin: 0;
-}
-
-::-webkit-scrollbar {
-	display: none;
-	opacity: 0;
-	visibility: hidden;
-}
+@import "./scss/base";
+@import "./scss/helpers/variables";
 @import "./scss/mixins/classes";
 @import "./js/components/preloader/preloader";
 @import "./js/components/header/style/header";
 @import "./js/components/header/style/burgerMenu";
+@import "./js/components/footer/style";

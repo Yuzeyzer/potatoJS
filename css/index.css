@@ -1,3 +1,8 @@
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
 body {
   margin: 0;
 }
@@ -95,6 +100,7 @@ body {
 }
 
 .burger-menu span {
+  position: relative;
   display: inline-block;
   width: 20px;
   height: 2px;
@@ -126,5 +132,21 @@ body {
 
 .burger-menu:hover span::after {
   width: 28px;
+}
+
+.footer {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.footer__title {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 35px;
+  font-style: normal;
+  margin: 0;
+  line-height: 40px;
+  color: #293341;
 }
 /*# sourceMappingURL=index.css.map */

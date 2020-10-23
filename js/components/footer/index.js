@@ -1,16 +1,34 @@
-// 1. Наша тема контекст
-// 2. Стрелочные функции ES6
+const Footer = () => {
+  const footer = document.createElement('footer');
+  const container = document.createElement('div');
+  const footerForm = document.createElement('form');
+  const footerTitle = document.createElement('h2');
+  const footerLabel = document.createElement('label');
+  const footerInput = document.createElement('input');
+  const footerButton = document.createElement('button');
+  const socialIcon = [];
+  const CopyRight = document.createElement('span');
 
-// function Hatam() {}
+  footer.className = 'footer';
+  container.className = 'container';
+  footerTitle.className = 'footer__title';
+  footerLabel.className = 'footer__label';
+  footerInput.className = 'footer__input';
+  footerForm.className = 'footer__form';
+  footerButton.className = 'footer__btn';
 
-// const Ajara = () => {};
+  footerInput.setAttribute('placeholder', 'Enter your email address');
 
+  footerTitle.innerHTML = `Join Our Newsletter`;
+  footerButton.innerHTML = 'Subscribe';
+  footerLabel.appendChild(footerInput);
+  footerForm.appendChild(footerLabel);
+  footerForm.appendChild(footerButton);
+  footer.appendChild(container);
+  container.appendChild(footerTitle);
+  container.appendChild(footerForm);
 
-// const Obj = {
-//   human: 'Ajara',
-//   age: '19',
-//   race: 'Asian',
-//   height: 168,
-//   weight: 49,
-//   volume: function () {
-//     return console.log(this.age);
+  return footer;
+};
+
+export default Footer;

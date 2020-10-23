@@ -13,7 +13,6 @@ for (let i = 0; i < languages.length; i++) {
   array.push(dropDownItems);
   if (i > 0) {
     dropDownItems.style.opacity = '0';
-    dropDownItems.style.transform = 'translateY(-30px)';
   }
 }
 
@@ -22,15 +21,18 @@ dropDown.addEventListener('click', function () {
     dropDown.style.height = '60px';
     dropDown.className = 'none';
     dropDown.style.backgroundColor = 'transparent';
-
-    array.forEach((item) => {
-      item.style.opacity = '0';
-      item.style.transform = 'translateY(-30px)';
-      array[0].style.opacity = '1';
-      array[0].style.transform = 'translateY(0)';
+    dropDown.style.top = '0';
+    dropDown.style.zIndex = '0';
+    array.forEach((item, index) => {
+      if (index > 0) {
+        item.style.opacity = '0';
+        item.style.visibility = 'hidden';
+      }
     });
     arrow.style.transform = 'rotate(90deg)';
   } else {
+    dropDown.style.zIndex = '1';
+    dropDown.style.top = '60px';
     dropDown.style.height = 'auto';
     arrow.style.transform = 'rotate(-90deg)';
     dropDownItems.style.display = 'block';
@@ -39,7 +41,7 @@ dropDown.addEventListener('click', function () {
     dropDown.style.backgroundColor = '#fff';
     array.forEach((item) => {
       item.style.opacity = '1';
-      item.style.transform = 'translateY(0)';
+      item.style.visibility = 'visible';
     });
   }
   dropDown.style.bottom = '0';
