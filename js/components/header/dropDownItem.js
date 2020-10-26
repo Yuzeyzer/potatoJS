@@ -32,7 +32,7 @@ dropDown.addEventListener('click', function () {
     arrow.style.transform = 'rotate(90deg)';
   } else {
     dropDown.style.zIndex = '1';
-    dropDown.style.top = '60px';
+    dropDown.style.top = '1.1vw';
     dropDown.style.height = 'auto';
     arrow.style.transform = 'rotate(-90deg)';
     dropDownItems.style.display = 'block';

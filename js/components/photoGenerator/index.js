@@ -35,7 +35,7 @@ time.appendChild(hoursHTML);
 time.appendChild(minutesHTML);
 time.appendChild(secondsHTML);
 
-const newYears = '24 Oct 2020';
+const newYears = '27 Oct 2020';
 
 const countDown = () => {
   const newYearsDate = new Date(newYears);

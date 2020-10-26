@@ -19,10 +19,34 @@ const Footer = () => {
 
   footerInput.setAttribute('placeholder', 'Enter your email address');
 
+  let maxim = 0;
+
   footerButton.addEventListener('click', (event) => {
+    const removeClass = () => {
+      footerLabel.classList.remove('is-active');
+    };
+    if (!footerLabel.classList.contains('is-active')) {
+      footerLabel.classList.add('is-active');
+      setTimeout(removeClass, 1000);
+    }
     event.preventDefault();
-    console.log(footerLabel)
-    footerLabel.classList.toggle('is-active');
+    maxim += 1;
+    console.log(maxim);
+    if (maxim % 5 === 0) {
+      let video = document.createElement('video');
+      const removeImg = () => {
+        video.remove()
+      };
+      video.src = './assets/stop.mp4';
+      video.setAttribute('autoplay', 'autoplay');
+      video.style.position = 'fixed';
+      video.style.left = '50%';
+      video.style.top = '50%';
+      video.style.transform = 'translate(-50%, -50%)';
+      video.style.zIndex = '11';
+      document.body.appendChild(video);
+      setTimeout(removeImg, 2000)
+    }
   });
 
   footerTitle.innerHTML = `Join Our Newsletter`;
