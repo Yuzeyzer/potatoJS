@@ -2,6 +2,7 @@
 	padding: 100px 0;
 	background-color: $whitish;
 	text-align: center;
+
 	&__title {
 		@include font("Poppins", 35px, 500);
 		margin: 0;
@@ -11,7 +12,7 @@
 	&__form {
 		position: relative;
 		width: 500px;
-		margin: auto;
+		margin: 40px auto 60px;
 		display: flex;
 	}
 	&__label {
