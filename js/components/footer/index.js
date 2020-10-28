@@ -4,17 +4,20 @@ import { container } from '../../base.js';
 const Footer = () => {
   const footerNav = Nav.cloneNode(true);
   const footer = document.createElement('footer');
-  const Footercontainer = container.cloneNode(false);
+  const footercontainer = container.cloneNode(false);
   const footerForm = document.createElement('form');
   const footerTitle = document.createElement('h2');
   const footerLabel = document.createElement('label');
   const footerInput = document.createElement('input');
   const footerButton = document.createElement('button');
-  const socialIcon = [];
-  const CopyRight = document.createElement('span');
+  const socialIcon = document.createElement('ul');
+  const copyRight = document.createElement('span');
 
   footer.className = 'footer';
-  Footercontainer.className = 'container';
+  footerNav.className = 'footer__nav';
+  socialIcon.className = 'footer__social social';
+  copyRight.className = 'footer__copyright';
+  footercontainer.className = 'container';
   footerTitle.className = 'footer__title';
   footerLabel.className = 'footer__label';
   footerInput.className = 'footer__input';
@@ -53,16 +56,25 @@ const Footer = () => {
       setTimeout(removeImg, 2000);
     }
   });
-
+  socialIcon.innerHTML = `
+  <li class='social__item'><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+  <li class='social__item'><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+  <li class='social__item'><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+  <li class='social__item'><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+  <li class='social__item'><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+  `;
   footerTitle.innerHTML = `Join Our Newsletter`;
   footerButton.innerHTML = 'Subscribe';
+  copyRight.innerText = '© 2018 Ocolus. All Rights Reserved';
   footerLabel.appendChild(footerInput);
   footerForm.appendChild(footerLabel);
   footerForm.appendChild(footerButton);
-  footer.appendChild(Footercontainer);
-  Footercontainer.appendChild(footerTitle);
-  Footercontainer.appendChild(footerForm);
-  Footercontainer.appendChild(footerNav);
+  footer.appendChild(footercontainer);
+  footercontainer.appendChild(footerTitle);
+  footercontainer.appendChild(footerForm);
+  footercontainer.appendChild(footerNav);
+  footercontainer.append(socialIcon);
+  footercontainer.append(copyRight);
   return footer;
 };
 

@@ -11,7 +11,7 @@
 	}
 	&__form {
 		position: relative;
-		width: 500px;
+		width: 700px;
 		margin: 40px auto 60px;
 		display: flex;
 	}
@@ -73,6 +73,52 @@
 				width: 100%;
 			}
 		}
+	}
+	&__nav {
+		ul {
+			padding: 0;
+			justify-content: center;
+		}
+		li:first-child {
+			margin-left: 0 !important;
+		}
+		li:not(:first-child) {
+			margin-left: 85px !important;
+		}
+		a {
+			color: $darkGray !important;
+			font-weight: 500;
+		}
+	}
+	&__copyright {
+		display: inline-block;
+		margin-top: 25px;
+		font-size: 16px;
+		line-height: 30px;
+		color: $darkGray7b;
+		font-weight: 300;
+		font-family: "Poppins";
+		text-align: center;
+	}
+}
+
+.social {
+	margin-top: 65px;
+	display: flex;
+	justify-content: center;
+
+	a {
+		@include flexbox;
+		width: 36px;
+		height: 36px;
+		border: 2px solid $lightGray;
+		padding: 10px;
+		border-radius: 50%;
+		color: $darkGray7b;
+	}
+
+	&__item:not(:first-child) {
+		margin-left: 15px !important;
 	}
 }
 
