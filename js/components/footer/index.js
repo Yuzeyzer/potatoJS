@@ -1,9 +1,9 @@
 import Nav from '../header/nav.js';
 import { container } from '../../base.js';
 
-const Footer = () => {
+// const Footer = (noned = false) => {
   const footerNav = Nav.cloneNode(true);
-  const footer = document.createElement('footer');
+  export const footer = document.createElement('footer');
   const footercontainer = container.cloneNode(false);
   const footerForm = document.createElement('form');
   const footerTitle = document.createElement('h2');
@@ -75,7 +75,11 @@ const Footer = () => {
   footercontainer.appendChild(footerNav);
   footercontainer.append(socialIcon);
   footercontainer.append(copyRight);
-  return footer;
-};
+  // if (noned == true) {
+  //   const root = document.getElementById("root")
+  //   root.removeChild(footer);
+  // }
+  // return footer;
+// };
 
-export default Footer;
+// export Footer;

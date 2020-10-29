@@ -1,7 +1,7 @@
 .preloader {
 	@include position(fixed, 0, 0);
 	@include flexbox;
-	z-index: 1;
+	z-index: 3;
 	width: 100vw;
 	height: 100vh;
 	background-color: #fff;

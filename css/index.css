@@ -38,6 +38,18 @@ li {
   list-style-type: none;
 }
 
+.col-4 {
+  width: 33.33%;
+}
+
+.none {
+  display: none;
+}
+
+.active-route {
+  display: block;
+}
+
 .preloader {
   position: fixed;
   left: auto;
@@ -47,7 +59,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 3;
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -213,7 +225,6 @@ li {
   font-size: 16px;
   font-style: normal;
   position: relative;
-  z-index: 2;
   display: inline-block;
   padding: 20px;
   box-sizing: border-box;
