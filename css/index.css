@@ -348,4 +348,89 @@ li {
     transform: translateX(-100%);
   }
 }
+
+.decor__header {
+  padding: 20px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.decor__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background: url("../../assets/Jumadil.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.decor__hero::before {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.decor__container {
+  padding: 70px;
+}
+
+.decor__logo {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 42px;
+  font-style: normal;
+  color: white;
+}
+
+.decor__logo span {
+  color: #5c7e94;
+}
+
+.decor__cart {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 13px;
+  font-style: normal;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.decor__title {
+  color: white;
+  font-size: 80px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Playfair Display";
+  text-align: center;
+  max-width: 800px;
+}
+
+.decor__link {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.decor__link:hover {
+  color: #5c7e94;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=index.css.map */

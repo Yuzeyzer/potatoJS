@@ -19,7 +19,7 @@ for (let i = 0; i < languages.length; i++) {
 dropDown.addEventListener('click', function () {
   if (dropDown.className == 'is-active') {
     dropDown.style.height = '60px';
-    dropDown.className = 'none';
+    dropDown.className = '';
     dropDown.style.backgroundColor = 'transparent';
     dropDown.style.top = '0';
     dropDown.style.zIndex = '0';

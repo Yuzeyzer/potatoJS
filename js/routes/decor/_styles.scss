@@ -1,0 +1,60 @@
+.decor {
+	&__header {
+		padding: 20px 45px;
+		@include flexbox(space-between);
+		@include position(absolute,0,0);
+		width: 100%;
+		box-sizing: border-box;
+	}
+	&__hero {
+		@include flexbox;
+		position: relative;
+		z-index: 1;
+		background: url("../../assets/Jumadil.jpg") no-repeat center;
+		background-size: cover;
+		height: 100vh;
+		flex-direction: column;
+		&::before {
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+		}
+	}
+	&__container {
+		padding: 70px;
+	}
+	&__logo {
+		@include font("Poppins", 42px, 700);
+		color: white;
+		span {
+			color: #5c7e94;
+		}
+	}
+	&__cart {
+		@include font("Poppins", 13px, 600);
+		letter-spacing: 2px;
+		color: white;
+	}
+	&__title {
+		color: white;
+		font-size: 80px;
+		color: #ffffff;
+		font-weight: 700;
+		font-family: "Playfair Display";
+		text-align: center;
+		max-width: 800px;
+	}
+	&__link{
+		@include font("Poppins", 14px, 500);
+		color: #ffffff;
+		transition: 0.3s;
+	}
+	&__link:hover{
+		color: #5c7e94;
+		text-decoration: underline;
+	}
+}

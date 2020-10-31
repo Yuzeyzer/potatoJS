@@ -19,16 +19,5 @@ for (let i = 0; i < navLinks.length; i++) {
   a.style.textTransform = 'uppercase';
   li.appendChild(a);
   ul.appendChild(li);
-  a.addEventListener('click', async () => {
-    cc()
-  });
 }
-
-async function cc() {
-  if (window.location.hash === '#decor') {
-    alert('Hatam urra');
-  }
-}
-window.addEventListener('click', () => {});
-
 export default nav;
