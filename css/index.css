@@ -369,7 +369,7 @@ li {
   justify-content: center;
   position: relative;
   z-index: 1;
-  background: url("../../assets/Jumadil.jpg") no-repeat center;
+  background: url("https://www.stua.com/wp-content/uploads/2020/07/stua-naharro-302-1200-nordik.jpg") no-repeat center;
   background-size: cover;
   height: 100vh;
   flex-direction: column;
@@ -420,6 +420,21 @@ li {
   max-width: 800px;
 }
 
+.decor__suptitle {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 50px;
+  text-align: center;
+  color: #71899b;
+}
+
+.decor__icons {
+  margin: 55px 0 0 50%;
+  transform: translateX(-50%);
+}
+
 .decor__link {
   font-family: "Poppins";
   font-weight: 500;
@@ -432,5 +447,13 @@ li {
 .decor__link:hover {
   color: #5c7e94;
   text-decoration: underline;
+}
+
+.decor__row {
+  display: flex;
+}
+
+.col-4 {
+  width: 33.33%;
 }
 /*# sourceMappingURL=index.css.map */
