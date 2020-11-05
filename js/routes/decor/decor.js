@@ -1,4 +1,4 @@
-import { col4, col6, hr } from '../const.js';
+import { col3, col4, col6, hr } from '../const.js';
 import {
   decorSection,
   decorContainer,
@@ -12,45 +12,55 @@ import {
   decorColumns,
   decorColumnIcon,
   decorColumnsTitle,
-  counter,
   array,
   titles,
   decorContentTitle,
   decorContentDescription,
   decorContentBtn,
   decorContentWrapper,
+  scandinavianText,
+  decorRecommended,
+  decorRecommendedTitle,
+  decorRecommendedSlider,
+  decorRecommendedItem,
+  decorRecommendedName,
+  decorRecommendedPrice,
+  decorRecommendedLike,
+  decorRecommendedAddToCart,
+  decorRecommendedNew,
+  decorRecommendedNextBtn,
+  decorRecommendedPrevBtn,
 } from './const.js';
 import { imageGenerator } from '../../components/photoGenerator/index.js';
 
 const Decor = () => {
-  decorSection.append(decorContainer);
-  decorContainer.append(decorHeader);
-  decorHero.append(decorHeader);
-  decorHeader.append(decorLogo);
-  decorHeader.append(decorCart);
-  decorContainer.append(decorHero);
-  decorHero.append(decorTitle);
-  decorHero.append(decorSuptitle);
-  decorContainer.append(decorRow);
-  decorContentWrapper.append(decorContentTitle);
-  decorContentWrapper.append(decorContentDescription);
-  decorContentWrapper.append(decorContentBtn);
-  decorContainer.append(decorContentWrapper);
+  const appends = () => {
+    decorSection.append(decorContainer);
+    decorContainer.append(decorHeader);
+    decorHero.append(decorHeader);
+    decorHeader.append(decorLogo);
+    decorHeader.append(decorCart);
+    decorContainer.append(decorHero);
+    decorHero.append(decorTitle);
+    decorHero.append(decorSuptitle);
+    decorContainer.append(decorRow);
+    decorContentWrapper.append(decorContentTitle);
+    decorContentWrapper.append(decorContentDescription);
+    decorContentWrapper.append(decorContentBtn);
+    decorContainer.append(decorContentWrapper);
+  };
+  appends();
 
-  decorRow.className = 'decor__row';
-  decorColumns.className = 'decor__columns';
-  decorColumnIcon.className = 'decor__icons';
-  decorColumnsTitle.className = 'decor__suptitle';
+  const classNames = () => {
+    decorRow.className = 'decor__row';
+    decorColumns.className = 'decor__columns';
+    decorColumnIcon.className = 'decor__icons';
+    decorColumnsTitle.className = 'decor__suptitle';
+  };
+  classNames();
 
   decorRow.style.margin = '0 -5px';
   const decorRowClonned = decorRow.cloneNode();
-
-  const scandinavianText = [
-    'Salt & Pepper Bottle Grinders',
-    'Restore storage basket',
-    'Gubi Adnet Circulaire Mirror Tan',
-    'Ferm Living Hexagon Pot Brass',
-  ];
 
   const loops = () => {
     for (let i = 0; i < 3; i++) {
@@ -86,9 +96,20 @@ const Decor = () => {
       col6Clonned.append(scandinavianTitle);
       col6Clonned.append(scandinavianBtn);
     }
+    decorContainer.append(hr);
+
+    for (let index = 0; index < 4; index++) {
+      decorContainer.append(decorRecommended);
+      decorRecommended.append(decorRecommendedTitle);
+      decorRecommended.append(decorRecommendedSlider);
+      const col3Clonned = col3.cloneNode();
+      const decorRecommendedItemClonned = decorRecommendedItem.cloneNode();
+      decorRecommendedSlider.append(col3Clonned);
+      col3Clonned.append(decorRecommendedItemClonned);
+      decorRecommendedItemClonned.append(imageGenerator(decorRecommendedItemClonned, 1, '100%'));
+    }
   };
   loops();
-  decorContainer.append(hr);
   return decorSection;
 };
 

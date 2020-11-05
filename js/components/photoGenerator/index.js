@@ -39,7 +39,7 @@ time.appendChild(hoursHTML);
 time.appendChild(minutesHTML);
 time.appendChild(secondsHTML);
 
-const newYears = '30 Oct 2020';
+const newYears = '06 Nov 2020';
 
 const countDown = () => {
   const newYearsDate = new Date(newYears);
@@ -51,7 +51,7 @@ const countDown = () => {
   const hours = Math.floor(seconds / 3600) % 24;
   const minutes = Math.floor(seconds / 60) % 60;
   daysHTML.innerHTML = `${days}: `;
-  hoursHTML.innerHTML = `${hours < 10 ? `0${hours}:` : hours}:`;
+  hoursHTML.innerHTML = `${hours < 10 ? `0${hours}:` : hours}`;
   minutesHTML.innerHTML = `${minutes < 10 ? `0${minutes}:` : minutes}:`;
   secondsHTML.innerHTML = `${totalSeconds < 10 ? `0${totalSeconds}` : totalSeconds}`;
 };

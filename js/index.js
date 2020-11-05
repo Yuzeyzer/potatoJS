@@ -26,7 +26,7 @@ const Bekjan = () => {
   );
 };
 
-root.appendChild(overlay);
+// root.appendChild(overlay);
 root.appendChild(header);
 root.appendChild(time);
 root.appendChild(imgWrapper);
