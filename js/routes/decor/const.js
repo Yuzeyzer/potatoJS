@@ -26,9 +26,10 @@ export const decorContentDescription = document.createElement('p');
 export const decorContentBtn = document.createElement('a');
 export const decorContentWrapper = document.createElement('div');
 
-decorContentTitle.className = 'decorContentTitle';
-decorContentDescription.className = 'decorContentDescription';
-decorContentBtn.className = 'decorContentBtn';
+decorContentTitle.className = 'decor__content--title';
+decorContentDescription.className = 'decor__content--description';
+decorContentBtn.className = 'decor__content--btn';
+decorContentWrapper.className = 'decor__content--wrapper';
 
 decorSection.className = 'decor';
 decorHero.className = 'decor__hero';
@@ -45,3 +46,5 @@ decorCart.innerText = `YOUR CART [${counter}]`;
 decorContentTitle.innerHTML = 'The Home Of Scandinavian Design';
 decorContentDescription.innerHTML =
   'We help people find the perfect product at the right price. Our extensive selection and superior customer service coupled with the convenience of online shopping, make it easier than ever before to find exactly what you want for your home at a price you can afford.';
+decorContentBtn.innerHTML = 'READ MORE OUR STORY &rarr;';
+decorContentBtn.href = '#';

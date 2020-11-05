@@ -2,7 +2,7 @@
 	&__header {
 		padding: 20px 45px;
 		@include flexbox(space-between);
-		@include position(absolute,0,0);
+		@include position(absolute, 0, 0);
 		width: 100%;
 		box-sizing: border-box;
 	}
@@ -49,7 +49,7 @@
 		max-width: 800px;
 	}
 	&__suptitle {
-		@include font ("Poppins", 15px, 600);
+		@include font("Poppins", 15px, 600);
 		line-height: 50px;
 		text-align: center;
 		color: #71899b;
@@ -58,20 +58,95 @@
 		margin: 55px 0 0 50%;
 		transform: translateX(-50%);
 	}
-	&__link{
+	&__link {
 		@include font("Poppins", 14px, 500);
 		color: #ffffff;
 		transition: 0.3s;
 	}
-	&__link:hover{
+	&__link:hover {
 		color: #5c7e94;
 		text-decoration: underline;
 	}
 	&__row {
 		display: flex;
+		flex-wrap: wrap;
 	}
-}
 
-.col-4 {
-	width: 33.33%;
+	&__content--wrapper {
+		text-align: center;
+		margin: 95px auto 0;
+		max-width: 845px;
+	}
+
+	&__content--title::before {
+		content: "";
+		position: absolute;
+		bottom: -32px;
+		width: 150px;
+		height: 2px;
+		background: #7b7b7b;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__content--title {
+		position: relative;
+		font-size: 40px;
+		color: #293341;
+		font-weight: 700;
+		font-family: "Playfair Display";
+		margin-bottom: 85px;
+	}
+	&__content--description {
+		font-size: 18px;
+		line-height: 35px;
+		color: #7b7b7b;
+		font-weight: 300;
+		font-family: "Poppins";
+		margin-bottom: 45px;
+	}
+
+	&__content--btn {
+		border: 2px solid #293341;
+		font-size: 14px;
+		letter-spacing: 2px;
+		color: #293341;
+		font-weight: 500;
+		font-family: "Poppins";
+		padding: 21px 25px;
+		transition: 0.3s;
+		&:hover {
+			color: #fff;
+			background-color: #293341;
+		}
+	}
+	.scandinavian {
+		&__title {
+			margin: 50px 0 25px 0;
+			text-align: center;
+			font-size: 30px;
+			line-height: 35px;
+			color: #293341;
+			font-weight: 700;
+			font-family: "Playfair Display";
+		}
+		&__btn {
+			display: block;
+			margin-bottom: 100px;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 14px;
+			letter-spacing: 2px;
+			color: #293341;
+			font-weight: 500;
+			font-family: "Poppins";
+			cursor: pointer;
+			transition: 0.3s;
+			&:hover {
+				text-decoration: line-through;
+			}
+		}
+	}
+	hr {
+		border-color: #dddddd;
+	}
 }

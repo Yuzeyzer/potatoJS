@@ -5,14 +5,18 @@ imgWrapper.style.padding = '0 40px';
 imgWrapper.style.boxSizing = 'border-box';
 imgWrapper.style.margin = '100px 0';
 
-for (let i = 0; i < 12; i++) {
-  var img = document.createElement('img');
-  img.src = `https://source.unsplash.com/collection/${i}/450x450`;
-  img.style.width = '25%';
-  img.style.padding = '3px';
-  img.style.boxSizing = 'border-box';
-  imgWrapper.appendChild(img);
-}
+export const imageGenerator = (parent, times, width) => {
+  for (let i = 0; i < times; i++) {
+    let randomizer = Math.floor(Math.random() * 100);
+    var img = document.createElement('img');
+    img.src = `https://source.unsplash.com/collection/${randomizer}/450x450`;
+    img.style.width = width;
+    img.style.padding = '3px';
+    img.style.boxSizing = 'border-box';
+    parent.appendChild(img);
+  }
+  return '';
+};
 
 export const time = document.createElement('ul');
 time.style.fontSize = '16px';

@@ -1,4 +1,4 @@
-import { col4 } from '../const.js';
+import { col4, col6, hr } from '../const.js';
 import {
   decorSection,
   decorContainer,
@@ -20,7 +20,7 @@ import {
   decorContentBtn,
   decorContentWrapper,
 } from './const.js';
-
+import { imageGenerator } from '../../components/photoGenerator/index.js';
 
 const Decor = () => {
   decorSection.append(decorContainer);
@@ -37,14 +37,20 @@ const Decor = () => {
   decorContentWrapper.append(decorContentBtn);
   decorContainer.append(decorContentWrapper);
 
-  
-
   decorRow.className = 'decor__row';
   decorColumns.className = 'decor__columns';
   decorColumnIcon.className = 'decor__icons';
   decorColumnsTitle.className = 'decor__suptitle';
 
   decorRow.style.margin = '0 -5px';
+  const decorRowClonned = decorRow.cloneNode();
+
+  const scandinavianText = [
+    'Salt & Pepper Bottle Grinders',
+    'Restore storage basket',
+    'Gubi Adnet Circulaire Mirror Tan',
+    'Ferm Living Hexagon Pot Brass',
+  ];
 
   const loops = () => {
     for (let i = 0; i < 3; i++) {
@@ -62,9 +68,27 @@ const Decor = () => {
       col4Cloned.append(decorItem);
       decorRow.append(col4Cloned);
     }
+    // Этот ужас не мой, вините Айзу
+    for (let i = 0; i < 4; i++) {
+      const scandinavianTitle = document.createElement('h3');
+      const scandinavianBtn = document.createElement('a');
+      scandinavianTitle.innerHTML = scandinavianText[i];
+      scandinavianBtn.innerHTML = 'discover now';
+      scandinavianTitle.className = 'scandinavian__title';
+      scandinavianBtn.className = 'scandinavian__btn';
+      scandinavianBtn.href = '#';
+      let col6Clonned = col6.cloneNode();
+      col6Clonned.classList.add('scandinavian__item');
+      decorRowClonned.style.padding = '100px 0 0 0';
+      decorRowClonned.append(col6Clonned);
+      decorContainer.append(decorRowClonned);
+      console.log(imageGenerator(col6Clonned, 1, '100%'));
+      col6Clonned.append(scandinavianTitle);
+      col6Clonned.append(scandinavianBtn);
+    }
   };
   loops();
-
+  decorContainer.append(hr);
   return decorSection;
 };
 

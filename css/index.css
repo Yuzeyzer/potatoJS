@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 .container {
   max-width: 1170px;
   margin: auto;
@@ -42,6 +43,10 @@ li {
   width: 33.33%;
 }
 
+.col-6 {
+  width: 50%;
+}
+
 .none {
   display: none;
 }
@@ -74,20 +79,43 @@ li {
   animation: 1s fontSize 0s ease-in-out forwards;
 }
 
+.preloader .o-1 {
+  animation: 1s o 3s ease-in-out infinite forwards;
+}
+
+.preloader .c {
+  animation: 1s c 3.2s ease-in-out infinite forwards;
+}
+
 .preloader span {
+  display: inline-block;
+}
+
+.preloader .dot {
   color: red;
 }
 
-@keyframes overlay {
-  from {
-    opacity: 1;
+.preloader__dot {
+  position: absolute;
+  left: 48.6%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  z-index: 11;
+  background-color: black;
+  border-radius: 50%;
+  animation: 3s blackHole 1s linear forwards;
+}
+
+@keyframes blackHole {
+  0% {
+    width: 0;
+    height: 0;
   }
-  50% {
-    opacity: 0;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
+  100% {
+    width: 3000px;
+    height: 3000px;
   }
 }
 
@@ -97,6 +125,29 @@ li {
   }
   to {
     font-size: 72px;
+    z-index: 12;
+  }
+}
+
+@keyframes o {
+  from {
+    color: white;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes c {
+  from {
+    color: white;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-180px);
   }
 }
 
@@ -451,9 +502,89 @@ li {
 
 .decor__row {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.col-4 {
-  width: 33.33%;
+.decor__content--wrapper {
+  text-align: center;
+  margin: 95px auto 0;
+  max-width: 845px;
+}
+
+.decor__content--title::before {
+  content: "";
+  position: absolute;
+  bottom: -32px;
+  width: 150px;
+  height: 2px;
+  background: #7b7b7b;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.decor__content--title {
+  position: relative;
+  font-size: 40px;
+  color: #293341;
+  font-weight: 700;
+  font-family: "Playfair Display";
+  margin-bottom: 85px;
+}
+
+.decor__content--description {
+  font-size: 18px;
+  line-height: 35px;
+  color: #7b7b7b;
+  font-weight: 300;
+  font-family: "Poppins";
+  margin-bottom: 45px;
+}
+
+.decor__content--btn {
+  border: 2px solid #293341;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #293341;
+  font-weight: 500;
+  font-family: "Poppins";
+  padding: 21px 25px;
+  transition: 0.3s;
+}
+
+.decor__content--btn:hover {
+  color: #fff;
+  background-color: #293341;
+}
+
+.decor .scandinavian__title {
+  margin: 50px 0 25px 0;
+  text-align: center;
+  font-size: 30px;
+  line-height: 35px;
+  color: #293341;
+  font-weight: 700;
+  font-family: "Playfair Display";
+}
+
+.decor .scandinavian__btn {
+  display: block;
+  margin-bottom: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #293341;
+  font-weight: 500;
+  font-family: "Poppins";
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.decor .scandinavian__btn:hover {
+  text-decoration: line-through;
+}
+
+.decor hr {
+  border-color: #dddddd;
 }
 /*# sourceMappingURL=index.css.map */

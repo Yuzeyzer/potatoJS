@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,sFAAI",
+    "sources": [
+        "../scss/fonts/fonts.scss"
+    ],
+    "names": [],
+    "file": "fonts.css"
+}
